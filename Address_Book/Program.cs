@@ -13,6 +13,7 @@ namespace Address_Book
             Console.WriteLine("---------**** Welcome to Address Book System ****---------");
             Booksystem Ads = new Booksystem();
             Ads.CreateContacts();
+            Ads.AddContact();
         }
     }
 }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Address_Book
 {
-	internal class Booksystem
-	{
+    internal class Booksystem
+    {
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -28,7 +28,7 @@ namespace Address_Book
 
             Console.Write("\n Enter PhoneNumber: ");
             Ads.PhoneNumber = (int)Convert.ToInt64(Console.ReadLine());
-           
+
 
             Console.Write("\n Enter Email ID: ");
             Ads.EmailId = Console.ReadLine();
@@ -44,6 +44,35 @@ namespace Address_Book
                 "\n Phone_Num: " + Ads.PhoneNumber + "\n Mail: " + Ads.EmailId + "\n Address: " + Ads.Address + "\n City: "
                 + Ads.City + "\n State: " + Ads.State + "\n Zipcode: " + Ads.ZipCode);
         }
-    }
 
+        List<Booksystem> contacts = new List<Booksystem>();
+        public void AddContact()
+        {
+            Booksystem Ads = new Booksystem();
+            Console.Write("\n Enter FirstName: ");
+            Ads.FirstName = Console.ReadLine();
+            Console.Write("\n Enter LastName: ");
+            Ads.LastName = Console.ReadLine();
+
+            Console.Write("\n Enter PhoneNumber: ");
+            Ads.PhoneNumber = (int)Convert.ToInt64(Console.ReadLine());
+
+
+            Console.Write("\n Enter Email ID: ");
+            Ads.EmailId = Console.ReadLine();
+            Console.Write("\n Enter Address: ");
+            Ads.Address = Console.ReadLine();
+            Console.Write("\n Enter City: ");
+            Ads.City = Console.ReadLine();
+            Console.Write("\n Enter State: ");
+            Ads.State = Console.ReadLine();
+            Console.Write("\n Enter ZipCode: ");
+            Ads.ZipCode = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\n Contact Created:- \n\n First_Name: " + Ads.FirstName + "\n Last_Name: " + Ads.LastName +
+                "\n Phone_Num: " + Ads.PhoneNumber + "\n Mail: " + Ads.EmailId + "\n Address: " + Ads.Address + "\n City: "
+                + Ads.City + "\n State: " + Ads.State + "\n Zipcode: " + Ads.ZipCode);
+
+            contacts.Add(Ads);
+        }
+    }
 }
