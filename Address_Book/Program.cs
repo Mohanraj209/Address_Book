@@ -14,6 +14,7 @@ namespace Address_Book
             Booksystem Ads = new Booksystem();
             Ads.CreateContacts();
             Ads.AddContact();
+            Ads.EditContact("Mohan");
         }
     }
 }
